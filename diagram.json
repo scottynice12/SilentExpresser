@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "author": "Mood Communicator",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-slide-potentiometer", "id": "pot1", "top": 0, "left": 250, "attrs": { "label": "Select Mood" } },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": 120, "left": -120, "attrs": { "pins": "i2c" } }
+  ],
+  "connections": [
+    [ "uno:A0", "pot1:SIG", "green", [ "v0" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "pot1:GND", "uno:GND", "black", [ "v0" ] ],
+    [ "lcd1:SCL", "uno:A5", "blue", [ "v0" ] ],
+    [ "lcd1:SDA", "uno:A4", "purple", [ "v0" ] ],
+    [ "lcd1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "lcd1:GND", "uno:GND", "black", [ "v0" ] ]
+  ]
+}
