@@ -26,14 +26,26 @@ void loop() {
   
   lcd.setCursor(0, 1);
 
-  // Divide the slider into 4 easy mood sections
-  if (moodValue < 250) {
+  // Divide the slider into 8 sections for all the moods
+  if (moodValue < 128) {
     lcd.print(">> HAPPY :)     ");
   } 
-  else if (moodValue >= 250 && moodValue < 500) {
+  else if (moodValue >= 128 && moodValue < 256) {
     lcd.print(">> TIRED / REST ");
   } 
-  else if (moodValue >= 500 && moodValue < 750) {
+  else if (moodValue >= 256 && moodValue < 384) {
+    lcd.print(">> I'M OK       ");
+  }
+  else if (moodValue >= 384 && moodValue < 512) {
+    lcd.print(">> HUNGRY       ");
+  } 
+  else if (moodValue >= 512 && moodValue < 640) {
+    lcd.print(">> NOT HUNGRY   ");
+  } 
+  else if (moodValue >= 640 && moodValue < 768) {
+    lcd.print(">> WANT TO GO OUT");
+  }
+  else if (moodValue >= 768 && moodValue < 896) {
     lcd.print(">> PAIN / HURT  ");
   } 
   else {
